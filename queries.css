@@ -1,0 +1,193 @@
+/* em and rem do not depend on font size of media queries but instead 1rem=1em =16px */
+
+
+/* basically use em only because rem have some issues with some screen size 1200/16=()em */
+/* 1300px for smaller desktop  */
+@media (max-width:84em) {
+
+    .hero{
+        max-width: 120rem;
+
+    }
+    .heading-primary{
+        font-size: 4.4rem;
+
+    }
+    .gallery {
+       
+        grid-template-columns: repeat(2, 1fr);
+        
+      }
+
+    
+}
+
+/* 1200px for smaller landscape here  */
+
+@media (max-width:74em){
+    /* 9px i want , 9/16% */
+    html{
+        font-size: 56%;
+
+    }
+    .grid{
+        row-gap: 6.4rem;
+        column-gap: 4.8rem;
+
+
+    }
+    .heading-secondary{
+        font-size: 3.6rem;
+
+    }
+    .heading-tertiary{
+        font-size: 2.4rem;
+
+    }
+    .header{
+        padding: 0 3.6rem;
+
+    }
+    .main-nav-list{
+        gap: 3.2rem;
+
+    }
+
+    .hero{
+        gap: 4.8rem;
+    }
+    .testimonials-container {
+        padding: 9.6rem 3.2rem;
+      }
+}
+
+/* tablet 944px */
+@media  (max-width:59em){
+    html{
+        font-size: 50%;
+    }
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
+    }
+
+    .hero-img{
+        width: 60%;
+    }
+    .hero-text-box,.hero-img-box{
+        text-align: center;
+
+    }
+    .delivered-meal{
+        justify-content: center;
+        margin-top: 3.2rem;
+
+
+    }
+    .logo-img{
+        height: 2.4rem;
+    }
+    .step-text-number{
+        font-size: 7.4rem;
+
+
+    }
+    .meal-content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+      }
+    .section-testimonials{
+
+        grid-template-columns: 1fr;
+      }
+    
+    .gallery{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .ctn{
+        grid-template-columns: 3fr 2fr;
+    }
+    .ctn-form{
+        grid-template-columns: 1fr;
+    }
+    .btn--form{
+        margin-top: 1.2rem;
+    }
+    .btn-mobile-nav{
+        display: block;
+    }
+
+
+    .main-nav{
+        background-color: rgba(255, 255, 255, 0.97);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all 0.3s;
+        pointer-events: none;
+    }
+    .main-nav-list{
+        flex-direction: column;
+        gap: 4.8rem;
+    
+    }
+    .main-nav-link:link,
+    .main-nav-link:visited{
+        font-size: 3rem;
+
+    }
+    .nav-open .main-nav{
+        opacity: 1;
+        pointer-events: auto;
+        visibility:visible;
+        transform: translateX(0);
+    }
+    .icon-mobile-nav[name="close-outline"]{
+        display: none;
+      
+      
+      }
+    .icon-mobile-nav[name="menu-outline"]{
+        display: block;
+      
+      
+      }
+
+}
+
+/* this one is for mobile */
+
+@media (max-width:44em) {
+    .grid--3--cols,
+    .grid--4-cols{
+        grid-template-columns: repeat(2,1fr);
+
+    }
+    
+    .diets{
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+    .heading-secondary{
+        margin-bottom: 4.8rem;
+
+    }
+    .pricing-plan{
+        width: 100%;
+    }
+    .grid--footer{
+    grid-template-columns: 1fr 1fr 1fr ;
+    }
+    .section-how div div{
+        padding: 0;
+
+    }
+
+}
